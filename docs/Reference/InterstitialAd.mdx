@@ -1,0 +1,158 @@
+---
+title: InterstitialAd
+description: A class for interacting and showing Interstitial Ads.
+reference: true
+referenceKind: Class
+---
+# InterstitialAd
+ 
+ A class for interacting and showing Interstitial Ads.
+ 
+ An Interstitial advert can be pre-loaded and shown at a suitable point in your apps flow, such as at the end of a level
+in a game. An Interstitial is a full screen advert, laid on-top of your entire application which the user can interact with.
+Interactions are passed back via events which should be handled accordingly inside of your app.
+
+#### Example
+
+First create a new Interstitial instance, passing in your Ad Unit ID from the Google Mobile Ads configuration console, and any additional
+request options. The example below will present a test advert, and only request a non-personalized ad.
+
+```js
+import { InterstitialAd, TestIds } from 'react-native-google-mobile-ads';
+
+const interstitial = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL, {
+    requestNonPersonalizedAdsOnly: true,
+});
+ ```
+
+Each advert needs to be loaded from Google Mobile Ads before being shown. It is recommended this is performed before the user
+reaches the checkpoint to show the advert, so it's ready to go. Before loading the advert, we need to setup
+event listeners to listen for updates from Google Mobile Ads, such as advert loaded or failed to load.
+
+Event types match the `AdEventType` interface. Once the advert has loaded, we can trigger it to show:
+
+```js
+import { AdEventType } from 'react-native-google-mobile-ads';
+
+interstitial.onAdEvent((type) => {
+  if (type === AdEventType.LOADED) {
+    interstitial.show();
+  }
+});
+
+interstitial.load();
+ ```
+
+The advert will be presented to the user, and several more events can be triggered such as the user clicking the
+advert or closing it.
+
+ 
+ **Source**
+ 
+ <GithubLink title="ads/InterstitialAd.ts" src="src/ads/InterstitialAd.ts#L71"/>
+ 
+ ## constructor
+ 
+ ## _adUnitId
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L31"/>
+ 
+ ## _googleMobileAds
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L29"/>
+ 
+ ## _isLoadCalled
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L34"/>
+ 
+ ## _loaded
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L33"/>
+ 
+ ## _nativeListener
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L36"/>
+ 
+ ## _onAdEventHandler
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L35"/>
+ 
+ ## _requestId
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L30"/>
+ 
+ ## _requestOptions
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L32"/>
+ 
+ ## _type
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L28"/>
+ 
+ ## adUnitId
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L94"/>
+ 
+ ## loaded
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L98"/>
+ 
+ ## _handleAdEvent
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L61"/>
+ 
+ ## _setAdEventHandler
+ 
+ **Source**
+ 
+ <GithubLink title="ads/MobileAd.ts" src="src/ads/MobileAd.ts#L89"/>
+ 
+ ## load
+ 
+ **Source**
+ 
+ <GithubLink title="ads/InterstitialAd.ts" src="src/ads/InterstitialAd.ts#L116"/>
+ 
+ ## onAdEvent
+ 
+ **Source**
+ 
+ <GithubLink title="ads/InterstitialAd.ts" src="src/ads/InterstitialAd.ts#L130"/>
+ 
+ ## show
+ 
+ **Source**
+ 
+ <GithubLink title="ads/InterstitialAd.ts" src="src/ads/InterstitialAd.ts#L138"/>
+ 
+ ## createForAdRequest
+ 
+ **Source**
+ 
+ <GithubLink title="ads/InterstitialAd.ts" src="src/ads/InterstitialAd.ts#L98"/>
+ 
+ 

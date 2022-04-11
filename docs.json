@@ -2,11 +2,31 @@
   "name": "React Native Google Mobile Ads",
   "twitter": "invertaseio",
   "sidebar": [
-    ["Installation", "/"],
-    ["Displaying Ads", "/displaying-ads"],
-    ["Displaying Ads via Hook", "/displaying-ads-hook"],
-    ["European User Consent", "/european-user-consent"],
-    ["Common Reasons For Ads Not Showing", "/common-reasons-for-ads-not-showing"],
-    ["Migrating to v5", "/migrating-to-v5"]
-  ]
+    [
+      "Installation",
+      "/"
+    ],
+    [
+      "Displaying Ads",
+      "/displaying-ads"
+    ],
+    [
+      "Displaying Ads via Hook",
+      "/displaying-ads-hook"
+    ],
+    [
+      "European User Consent",
+      "/european-user-consent"
+    ],
+    [
+      "Common Reasons For Ads Not Showing",
+      "/common-reasons-for-ads-not-showing"
+    ],
+    [
+      "Migrating to v5",
+      "/migrating-to-v5"
+    ]
+  ],
+  "references": "Reference",
+  "typedocEntryDir": "src"
 }

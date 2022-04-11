@@ -1,0 +1,80 @@
+---
+title: AdEventType
+description: null
+reference: true
+referenceKind: Enumeration
+---
+# AdEventType
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L18"/>
+ 
+ ## CLICKED
+ 
+ The user clicked the advert.
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L62"/>
+ 
+ ## CLOSED
+ 
+ The user closed the ad and has returned back to your application.
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L67"/>
+ 
+ ## ERROR
+ 
+ The ad has thrown an error. See the error parameter the listener callback for more information.
+ 
+ #### Example
+
+```js
+import { AdEventType } from 'react-native-google-mobile-ads';
+
+advert.onAdEvent((type, error, data) => {
+  if (type === AdEventType.ERROR) {
+    console.log('Ad error:', error);
+  }
+});
+```
+
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L51"/>
+ 
+ ## LOADED
+ 
+ When an ad has loaded. At this point, the ad is ready to be shown to the user.
+ 
+ #### Example
+
+```js
+import { AdEventType } from 'react-native-google-mobile-ads';
+
+advert.onAdEvent((type,error,data) => {
+  if (type === AdEventType.LOADED) {
+    advert.show();
+  }
+});
+```
+
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L34"/>
+ 
+ ## OPENED
+ 
+ The ad opened and is currently visible to the user. This event is fired after the `show()`
+method has been called.
+ 
+ **Source**
+ 
+ <GithubLink title="AdEventType.ts" src="src/AdEventType.ts#L57"/>
+ 
+ 

@@ -1,0 +1,4194 @@
+{
+	"id": 0,
+	"name": "react-native-google-mobile-ads",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 214,
+			"name": "default",
+			"kind": 16777216,
+			"kindString": "Reference",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 23,
+					"character": 9
+				}
+			],
+			"target": 2
+		},
+		{
+			"id": 24,
+			"name": "AdEventType",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 28,
+					"name": "CLICKED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "The user clicked the advert."
+					},
+					"sources": [
+						{
+							"fileName": "AdEventType.ts",
+							"line": 62,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"clicked\""
+				},
+				{
+					"id": 29,
+					"name": "CLOSED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "The user closed the ad and has returned back to your application."
+					},
+					"sources": [
+						{
+							"fileName": "AdEventType.ts",
+							"line": 67,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"closed\""
+				},
+				{
+					"id": 26,
+					"name": "ERROR",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "The ad has thrown an error. See the error parameter the listener callback for more information.",
+						"text": "#### Example\n\n```js\nimport { AdEventType } from 'react-native-google-mobile-ads';\n\nadvert.onAdEvent((type, error, data) => {\n  if (type === AdEventType.ERROR) {\n    console.log('Ad error:', error);\n  }\n});\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "AdEventType.ts",
+							"line": 51,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"error\""
+				},
+				{
+					"id": 25,
+					"name": "LOADED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "When an ad has loaded. At this point, the ad is ready to be shown to the user.",
+						"text": "#### Example\n\n```js\nimport { AdEventType } from 'react-native-google-mobile-ads';\n\nadvert.onAdEvent((type,error,data) => {\n  if (type === AdEventType.LOADED) {\n    advert.show();\n  }\n});\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "AdEventType.ts",
+							"line": 34,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"loaded\""
+				},
+				{
+					"id": 27,
+					"name": "OPENED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "The ad opened and is currently visible to the user. This event is fired after the `show()`\nmethod has been called."
+					},
+					"sources": [
+						{
+							"fileName": "AdEventType.ts",
+							"line": 57,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"opened\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						28,
+						29,
+						26,
+						25,
+						27
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AdEventType.ts",
+					"line": 18,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "AdsConsentDebugGeography",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"comment": {
+				"shortText": "AdsConsentDebugGeography enum.",
+				"text": "Used to set a mock location when testing the `AdsConsent` helper.\n"
+			},
+			"children": [
+				{
+					"id": 5,
+					"name": "DISABLED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Disable any debug geography."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentDebugGeography.ts",
+							"line": 27,
+							"character": 2
+						}
+					],
+					"defaultValue": "0"
+				},
+				{
+					"id": 6,
+					"name": "EEA",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Sets the location to within the EEA."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentDebugGeography.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"defaultValue": "1"
+				},
+				{
+					"id": 7,
+					"name": "NOT_EEA",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Sets the location to outside of the EEA."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentDebugGeography.ts",
+							"line": 37,
+							"character": 2
+						}
+					],
+					"defaultValue": "2"
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AdsConsentDebugGeography.ts",
+					"line": 23,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "AdsConsentStatus",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"comment": {
+				"shortText": "AdsConsentStatus enum."
+			},
+			"children": [
+				{
+					"id": 11,
+					"name": "NOT_REQUIRED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "User consent not required."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentStatus.ts",
+							"line": 35,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"NOT_REQUIRED\""
+				},
+				{
+					"id": 12,
+					"name": "OBTAINED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "User consent already obtained."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentStatus.ts",
+							"line": 40,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"OBTAINED\""
+				},
+				{
+					"id": 10,
+					"name": "REQUIRED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "User consent required but not yet obtained."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentStatus.ts",
+							"line": 30,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"REQUIRED\""
+				},
+				{
+					"id": 9,
+					"name": "UNKNOWN",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Unknown consent status, AdsConsent.requestInfoUpdate needs to be called to update it."
+					},
+					"sources": [
+						{
+							"fileName": "AdsConsentStatus.ts",
+							"line": 25,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"UNKNOWN\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						11,
+						12,
+						10,
+						9
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AdsConsentStatus.ts",
+					"line": 21,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 30,
+			"name": "BannerAdSize",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 36,
+					"name": "ADAPTIVE_BANNER",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "A (next generation) dynamically sized banner that is full-width and auto-height."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 48,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"ADAPTIVE_BANNER\""
+				},
+				{
+					"id": 31,
+					"name": "BANNER",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Mobile Marketing Association (MMA) banner ad size (320x50 density-independent pixels)."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 23,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"BANNER\""
+				},
+				{
+					"id": 37,
+					"name": "FLUID",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "A dynamically sized banner that matches its parent's width and expands/contracts its height to match the ad's content after loading completes."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 53,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"FLUID\""
+				},
+				{
+					"id": 32,
+					"name": "FULL_BANNER",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Interactive Advertising Bureau (IAB) full banner ad size (468x60 density-independent pixels)."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 28,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"FULL_BANNER\""
+				},
+				{
+					"id": 33,
+					"name": "LARGE_BANNER",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Large banner ad size (320x100 density-independent pixels)."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 33,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"LARGE_BANNER\""
+				},
+				{
+					"id": 34,
+					"name": "LEADERBOARD",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Interactive Advertising Bureau (IAB) leaderboard ad size (728x90 density-independent pixels)."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 38,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"LEADERBOARD\""
+				},
+				{
+					"id": 35,
+					"name": "MEDIUM_RECTANGLE",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "Interactive Advertising Bureau (IAB) medium rectangle ad size (300x250 density-independent pixels)."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 43,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"MEDIUM_RECTANGLE\""
+				},
+				{
+					"id": 38,
+					"name": "WIDE_SKYSCRAPER",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "IAB wide skyscraper ad size (160x600 density-independent pixels). This size is currently not supported by the Google Mobile Ads network; this is intended for mediation ad networks only."
+					},
+					"sources": [
+						{
+							"fileName": "BannerAdSize.ts",
+							"line": 58,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"WIDE_SKYSCRAPER\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						36,
+						31,
+						37,
+						32,
+						33,
+						34,
+						35,
+						38
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BannerAdSize.ts",
+					"line": 19,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 13,
+			"name": "MaxAdContentRating",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 14,
+					"name": "G",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "\"General audiences.\" Content suitable for all audiences, including families and children."
+					},
+					"sources": [
+						{
+							"fileName": "MaxAdContentRating.ts",
+							"line": 22,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"G\""
+				},
+				{
+					"id": 17,
+					"name": "MA",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "\"Mature audiences.\" Content suitable only for mature audiences; includes topics such as alcohol, gambling, sexual content, and weapons."
+					},
+					"sources": [
+						{
+							"fileName": "MaxAdContentRating.ts",
+							"line": 37,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"MA\""
+				},
+				{
+					"id": 15,
+					"name": "PG",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "\"Parental guidance.\" Content suitable for most audiences with parental guidance, including topics like non-realistic, cartoonish violence."
+					},
+					"sources": [
+						{
+							"fileName": "MaxAdContentRating.ts",
+							"line": 27,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"PG\""
+				},
+				{
+					"id": 16,
+					"name": "T",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "T: \"Teen.\" Content suitable for teen and older audiences, including topics such as general health, social networks, scary imagery, and fight sports."
+					},
+					"sources": [
+						{
+							"fileName": "MaxAdContentRating.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"T\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						14,
+						17,
+						15,
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "MaxAdContentRating.ts",
+					"line": 18,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 39,
+			"name": "RewardedAdEventType",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 41,
+					"name": "EARNED_REWARD",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "An event fired when the user earned the reward for the video. If the user does not earn a reward,\nthe `AdEventType.CLOSED` event will be fired with no rewarded event.",
+						"text": "The reward contains a `type` and `amount`.\n\n#### Example\n\n```js\nimport { RewardedAdEventType } from 'react-native-google-mobile-ads';\n\nrewardedAd.onAdEvent((type, error, data) => {\n  if (type === RewardedAdEventType.EARNED_REWARD) {\n    console.log(`User earned ${data.amount} ${data.type}`);\n    // E.g. \"User earned 50 coins\"\n  }\n});\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "RewardedAdEventType.ts",
+							"line": 63,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"rewarded_earned_reward\""
+				},
+				{
+					"id": 40,
+					"name": "LOADED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"comment": {
+						"shortText": "An event fired when a rewarded ad has loaded.",
+						"text": "This type differs from `AdEventType.LOADED` as when a rewarded ad is loaded,\nan additional data payload is provided to the event handler containing the ad reward\n(assuming the user earns the reward).\n\nThe reward contains a `type` and `amount`.\n\n#### Example\n\n```js\nimport { RewardedAdEventType } from 'react-native-google-mobile-ads';\n\nrewardedAd.onAdEvent((type, error, data) => {\n  if (type === RewardedAdEventType.LOADED) {\n    console.log(`Rewarded Ad loaded with ${data.amount} ${data.type} as reward`);\n    // E.g. \"Rewarded Ad loaded with 50 coins as reward\"\n    rewardedAd.show();\n  }\n});\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "RewardedAdEventType.ts",
+							"line": 42,
+							"character": 2
+						}
+					],
+					"defaultValue": "\"rewarded_loaded\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						41,
+						40
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "RewardedAdEventType.ts",
+					"line": 18,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 43,
+			"name": "AppOpenAd",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 48,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 49,
+							"name": "new AppOpenAd",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 50,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "app_open"
+											},
+											{
+												"type": "literal",
+												"value": "interstitial"
+											},
+											{
+												"type": "literal",
+												"value": "rewarded"
+											}
+										]
+									}
+								},
+								{
+									"id": 51,
+									"name": "googleMobileAds",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "MobileAdsModuleInterface"
+									}
+								},
+								{
+									"id": 52,
+									"name": "requestId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 53,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 54,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 43,
+								"name": "AppOpenAd"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.constructor"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.constructor"
+					}
+				},
+				{
+					"id": 68,
+					"name": "_adUnitId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 31,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._adUnitId"
+					}
+				},
+				{
+					"id": 66,
+					"name": "_googleMobileAds",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 29,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "MobileAdsModuleInterface"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._googleMobileAds"
+					}
+				},
+				{
+					"id": 71,
+					"name": "_isLoadCalled",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 34,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._isLoadCalled"
+					}
+				},
+				{
+					"id": 70,
+					"name": "_loaded",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 33,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._loaded"
+					}
+				},
+				{
+					"id": 73,
+					"name": "_nativeListener",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 36,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"qualifiedName": "EmitterSubscription",
+						"package": "@types/react-native",
+						"name": "EmitterSubscription"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._nativeListener"
+					}
+				},
+				{
+					"id": 72,
+					"name": "_onAdEventHandler",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 35,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": null
+							},
+							{
+								"type": "reference",
+								"name": "AdEventListener"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._onAdEventHandler"
+					}
+				},
+				{
+					"id": 67,
+					"name": "_requestId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 30,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestId"
+					}
+				},
+				{
+					"id": 69,
+					"name": "_requestOptions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RequestOptions"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestOptions"
+					}
+				},
+				{
+					"id": 65,
+					"name": "_type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 28,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "app_open"
+							},
+							{
+								"type": "literal",
+								"value": "interstitial"
+							},
+							{
+								"type": "literal",
+								"value": "rewarded"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._type"
+					}
+				},
+				{
+					"id": 91,
+					"name": "adUnitId",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 94,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 92,
+							"name": "adUnitId",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.adUnitId"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.adUnitId"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.adUnitId"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.adUnitId"
+					}
+				},
+				{
+					"id": 93,
+					"name": "loaded",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 98,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 94,
+							"name": "loaded",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.loaded"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.loaded"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.loaded"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.loaded"
+					}
+				},
+				{
+					"id": 74,
+					"name": "_handleAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 61,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 75,
+							"name": "_handleAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 76,
+									"name": "event",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 77,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 78,
+													"name": "body",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "ads/MobileAd.ts",
+															"line": 62,
+															"character": 4
+														}
+													],
+													"type": {
+														"type": "reflection",
+														"declaration": {
+															"id": 79,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {},
+															"children": [
+																{
+																	"id": 85,
+																	"name": "data",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 65,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"name": "RewardedAdReward"
+																	}
+																},
+																{
+																	"id": 81,
+																	"name": "error",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 64,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reflection",
+																		"declaration": {
+																			"id": 82,
+																			"name": "__type",
+																			"kind": 65536,
+																			"kindString": "Type literal",
+																			"flags": {},
+																			"children": [
+																				{
+																					"id": 83,
+																					"name": "code",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 16
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				},
+																				{
+																					"id": 84,
+																					"name": "message",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 30
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				}
+																			],
+																			"groups": [
+																				{
+																					"title": "Properties",
+																					"kind": 1024,
+																					"children": [
+																						83,
+																						84
+																					]
+																				}
+																			]
+																		}
+																	}
+																},
+																{
+																	"id": 80,
+																	"name": "type",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 63,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "union",
+																		"types": [
+																			{
+																				"type": "reference",
+																				"id": 24,
+																				"name": "AdEventType"
+																			},
+																			{
+																				"type": "reference",
+																				"id": 39,
+																				"name": "RewardedAdEventType"
+																			}
+																		]
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Properties",
+																	"kind": 1024,
+																	"children": [
+																		85,
+																		81,
+																		80
+																	]
+																}
+															]
+														}
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"kind": 1024,
+													"children": [
+														78
+													]
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._handleAdEvent"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._handleAdEvent"
+					}
+				},
+				{
+					"id": 86,
+					"name": "_setAdEventHandler",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 89,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 87,
+							"name": "_setAdEventHandler",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 88,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 89,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 90,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._setAdEventHandler"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._setAdEventHandler"
+					}
+				},
+				{
+					"id": 55,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/AppOpenAd.ts",
+							"line": 49,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 56,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.load"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.load"
+					}
+				},
+				{
+					"id": 57,
+					"name": "onAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/AppOpenAd.ts",
+							"line": 59,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 58,
+							"name": "onAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 59,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 60,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 61,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.onAdEvent"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.onAdEvent"
+					}
+				},
+				{
+					"id": 62,
+					"name": "show",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/AppOpenAd.ts",
+							"line": 67,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 63,
+							"name": "show",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 64,
+									"name": "showOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "AdShowOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"qualifiedName": "Promise",
+								"package": "typescript",
+								"name": "Promise"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.show"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.show"
+					}
+				},
+				{
+					"id": 44,
+					"name": "createForAdRequest",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true
+					},
+					"sources": [
+						{
+							"fileName": "ads/AppOpenAd.ts",
+							"line": 31,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 45,
+							"name": "createForAdRequest",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 46,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 47,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 43,
+								"name": "AppOpenAd"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						48
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						68,
+						66,
+						71,
+						70,
+						73,
+						72,
+						67,
+						69,
+						65
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						91,
+						93
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						74,
+						86,
+						55,
+						57,
+						62,
+						44
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "ads/AppOpenAd.ts",
+					"line": 30,
+					"character": 13
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAd"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAdInterface"
+				}
+			]
+		},
+		{
+			"id": 95,
+			"name": "InterstitialAd",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"shortText": "A class for interacting and showing Interstitial Ads.",
+				"text": "An Interstitial advert can be pre-loaded and shown at a suitable point in your apps flow, such as at the end of a level\nin a game. An Interstitial is a full screen advert, laid on-top of your entire application which the user can interact with.\nInteractions are passed back via events which should be handled accordingly inside of your app.\n\n#### Example\n\nFirst create a new Interstitial instance, passing in your Ad Unit ID from the Google Mobile Ads configuration console, and any additional\nrequest options. The example below will present a test advert, and only request a non-personalized ad.\n\n```js\nimport { InterstitialAd, TestIds } from 'react-native-google-mobile-ads';\n\nconst interstitial = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL, {\n    requestNonPersonalizedAdsOnly: true,\n});\n ```\n\nEach advert needs to be loaded from Google Mobile Ads before being shown. It is recommended this is performed before the user\nreaches the checkpoint to show the advert, so it's ready to go. Before loading the advert, we need to setup\nevent listeners to listen for updates from Google Mobile Ads, such as advert loaded or failed to load.\n\nEvent types match the `AdEventType` interface. Once the advert has loaded, we can trigger it to show:\n\n```js\nimport { AdEventType } from 'react-native-google-mobile-ads';\n\ninterstitial.onAdEvent((type) => {\n  if (type === AdEventType.LOADED) {\n    interstitial.show();\n  }\n});\n\ninterstitial.load();\n ```\n\nThe advert will be presented to the user, and several more events can be triggered such as the user clicking the\nadvert or closing it.\n"
+			},
+			"children": [
+				{
+					"id": 100,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 101,
+							"name": "new InterstitialAd",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 102,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "app_open"
+											},
+											{
+												"type": "literal",
+												"value": "interstitial"
+											},
+											{
+												"type": "literal",
+												"value": "rewarded"
+											}
+										]
+									}
+								},
+								{
+									"id": 103,
+									"name": "googleMobileAds",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "MobileAdsModuleInterface"
+									}
+								},
+								{
+									"id": 104,
+									"name": "requestId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 105,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 106,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 95,
+								"name": "InterstitialAd"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.constructor"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.constructor"
+					}
+				},
+				{
+					"id": 120,
+					"name": "_adUnitId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 31,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._adUnitId"
+					}
+				},
+				{
+					"id": 118,
+					"name": "_googleMobileAds",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 29,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "MobileAdsModuleInterface"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._googleMobileAds"
+					}
+				},
+				{
+					"id": 123,
+					"name": "_isLoadCalled",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 34,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._isLoadCalled"
+					}
+				},
+				{
+					"id": 122,
+					"name": "_loaded",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 33,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._loaded"
+					}
+				},
+				{
+					"id": 125,
+					"name": "_nativeListener",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 36,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"qualifiedName": "EmitterSubscription",
+						"package": "@types/react-native",
+						"name": "EmitterSubscription"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._nativeListener"
+					}
+				},
+				{
+					"id": 124,
+					"name": "_onAdEventHandler",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 35,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": null
+							},
+							{
+								"type": "reference",
+								"name": "AdEventListener"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._onAdEventHandler"
+					}
+				},
+				{
+					"id": 119,
+					"name": "_requestId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 30,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestId"
+					}
+				},
+				{
+					"id": 121,
+					"name": "_requestOptions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RequestOptions"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestOptions"
+					}
+				},
+				{
+					"id": 117,
+					"name": "_type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 28,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "app_open"
+							},
+							{
+								"type": "literal",
+								"value": "interstitial"
+							},
+							{
+								"type": "literal",
+								"value": "rewarded"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._type"
+					}
+				},
+				{
+					"id": 143,
+					"name": "adUnitId",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 94,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 144,
+							"name": "adUnitId",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.adUnitId"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.adUnitId"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.adUnitId"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.adUnitId"
+					}
+				},
+				{
+					"id": 145,
+					"name": "loaded",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 98,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 146,
+							"name": "loaded",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.loaded"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.loaded"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.loaded"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.loaded"
+					}
+				},
+				{
+					"id": 126,
+					"name": "_handleAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 61,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 127,
+							"name": "_handleAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 128,
+									"name": "event",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 129,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 130,
+													"name": "body",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "ads/MobileAd.ts",
+															"line": 62,
+															"character": 4
+														}
+													],
+													"type": {
+														"type": "reflection",
+														"declaration": {
+															"id": 131,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {},
+															"children": [
+																{
+																	"id": 137,
+																	"name": "data",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 65,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"name": "RewardedAdReward"
+																	}
+																},
+																{
+																	"id": 133,
+																	"name": "error",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 64,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reflection",
+																		"declaration": {
+																			"id": 134,
+																			"name": "__type",
+																			"kind": 65536,
+																			"kindString": "Type literal",
+																			"flags": {},
+																			"children": [
+																				{
+																					"id": 135,
+																					"name": "code",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 16
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				},
+																				{
+																					"id": 136,
+																					"name": "message",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 30
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				}
+																			],
+																			"groups": [
+																				{
+																					"title": "Properties",
+																					"kind": 1024,
+																					"children": [
+																						135,
+																						136
+																					]
+																				}
+																			]
+																		}
+																	}
+																},
+																{
+																	"id": 132,
+																	"name": "type",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 63,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "union",
+																		"types": [
+																			{
+																				"type": "reference",
+																				"id": 24,
+																				"name": "AdEventType"
+																			},
+																			{
+																				"type": "reference",
+																				"id": 39,
+																				"name": "RewardedAdEventType"
+																			}
+																		]
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Properties",
+																	"kind": 1024,
+																	"children": [
+																		137,
+																		133,
+																		132
+																	]
+																}
+															]
+														}
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"kind": 1024,
+													"children": [
+														130
+													]
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._handleAdEvent"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._handleAdEvent"
+					}
+				},
+				{
+					"id": 138,
+					"name": "_setAdEventHandler",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 89,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 139,
+							"name": "_setAdEventHandler",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 140,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 141,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 142,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._setAdEventHandler"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._setAdEventHandler"
+					}
+				},
+				{
+					"id": 107,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/InterstitialAd.ts",
+							"line": 116,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 108,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.load"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.load"
+					}
+				},
+				{
+					"id": 109,
+					"name": "onAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/InterstitialAd.ts",
+							"line": 130,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 110,
+							"name": "onAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 111,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 112,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 113,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.onAdEvent"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.onAdEvent"
+					}
+				},
+				{
+					"id": 114,
+					"name": "show",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/InterstitialAd.ts",
+							"line": 138,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 115,
+							"name": "show",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 116,
+									"name": "showOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "AdShowOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"qualifiedName": "Promise",
+								"package": "typescript",
+								"name": "Promise"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.show"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.show"
+					}
+				},
+				{
+					"id": 96,
+					"name": "createForAdRequest",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true
+					},
+					"sources": [
+						{
+							"fileName": "ads/InterstitialAd.ts",
+							"line": 98,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 97,
+							"name": "createForAdRequest",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Creates a new InterstitialAd instance.",
+								"text": "#### Example\n\n```js\nimport { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';\n\nconst interstitialAd = await InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL, {\n  requestAgent: 'CoolAds',\n});\n\ninterstitialAd.onAdEvent((type, error) => {\n  console.log('New event: ', type, error);\n\n  if (type === AdEventType.LOADED) {\n    interstitialAd.show();\n  }\n});\n\ninterstitialAd.load();\n```\n"
+							},
+							"parameters": [
+								{
+									"id": 98,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "The Ad Unit ID for the Interstitial. You can find this on your Google Mobile Ads dashboard."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 99,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "Optional RequestOptions used to load the ad.\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 95,
+								"name": "InterstitialAd"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						100
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						120,
+						118,
+						123,
+						122,
+						125,
+						124,
+						119,
+						121,
+						117
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						143,
+						145
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						126,
+						138,
+						107,
+						109,
+						114,
+						96
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "ads/InterstitialAd.ts",
+					"line": 71,
+					"character": 13
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAd"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAdInterface"
+				}
+			]
+		},
+		{
+			"id": 147,
+			"name": "RewardedAd",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"shortText": "A class for interacting and showing Rewarded Ads.",
+				"text": "An Rewarded advert can be pre-loaded and shown at a suitable point in your apps flow, such as at the end of a level\nin a game. The content of a rewarded advert can be controlled via your Google Mobile Ads dashboard. Typically users are rewarded\nafter completing a specific advert action (e.g. watching a video or submitting an option via an interactive form).\nEvents (such as the user earning a reward or closing a rewarded advert early) are sent back for you to handle accordingly\nwithin your application.\n\n#### Example\n\nFirst create a new Rewarded instance, passing in your Ad Unit ID from the Google Mobile Ads configuration console, and any additional\nrequest options. The example below will present a test advert, and only request a non-personalized ad.\n\n```js\nimport { RewardedAd, TestIds } from 'react-native-google-mobile-ads';\n\nconst rewarded = RewardedAd.createForAdRequest(TestIds.REWARDED, {\n    requestNonPersonalizedAdsOnly: true,\n});\n ```\n\nEach advert needs to be loaded from Google Mobile Ads before being shown. It is recommended this is performed before the user\nreaches the checkpoint to show the advert, so it's ready to go. Before loading the advert, we need to setup\nevent listeners to listen for updates from Google Mobile Ads, such as advert loaded or failed to load.\n\nEvent types match the `AdEventType` or `RewardedAdEventType` interface. The potential user reward for rewarded\nadverts are passed back to the event handler on advert load and when the user earns the reward.\n\n```js\nimport { RewardedAdEventType } from 'react-native-google-mobile-ads';\n\nrewarded.onAdEvent((type, error, reward) => {\n  if (type === RewardedAdEventType.LOADED) {\n    rewarded.show();\n  }\n  if (type === RewardedAdEventType.EARNED_REWARD) {\n    console.log('User earned reward of ', reward);\n  }\n});\n\nrewarded.load();\n ```\n\nThe rewarded advert will be presented to the user, and several more events can be triggered such as the user clicking the\nadvert, closing it or completing the action.\n"
+			},
+			"children": [
+				{
+					"id": 152,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 153,
+							"name": "new RewardedAd",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 154,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "app_open"
+											},
+											{
+												"type": "literal",
+												"value": "interstitial"
+											},
+											{
+												"type": "literal",
+												"value": "rewarded"
+											}
+										]
+									}
+								},
+								{
+									"id": 155,
+									"name": "googleMobileAds",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "MobileAdsModuleInterface"
+									}
+								},
+								{
+									"id": 156,
+									"name": "requestId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 157,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 158,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 147,
+								"name": "RewardedAd"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.constructor"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.constructor"
+					}
+				},
+				{
+					"id": 172,
+					"name": "_adUnitId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 31,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._adUnitId"
+					}
+				},
+				{
+					"id": 170,
+					"name": "_googleMobileAds",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 29,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "MobileAdsModuleInterface"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._googleMobileAds"
+					}
+				},
+				{
+					"id": 175,
+					"name": "_isLoadCalled",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 34,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._isLoadCalled"
+					}
+				},
+				{
+					"id": 174,
+					"name": "_loaded",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 33,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._loaded"
+					}
+				},
+				{
+					"id": 177,
+					"name": "_nativeListener",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 36,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"qualifiedName": "EmitterSubscription",
+						"package": "@types/react-native",
+						"name": "EmitterSubscription"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._nativeListener"
+					}
+				},
+				{
+					"id": 176,
+					"name": "_onAdEventHandler",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 35,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": null
+							},
+							{
+								"type": "reference",
+								"name": "AdEventListener"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._onAdEventHandler"
+					}
+				},
+				{
+					"id": 171,
+					"name": "_requestId",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 30,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestId"
+					}
+				},
+				{
+					"id": 173,
+					"name": "_requestOptions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 32,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RequestOptions"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._requestOptions"
+					}
+				},
+				{
+					"id": 169,
+					"name": "_type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 28,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "app_open"
+							},
+							{
+								"type": "literal",
+								"value": "interstitial"
+							},
+							{
+								"type": "literal",
+								"value": "rewarded"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._type"
+					}
+				},
+				{
+					"id": 195,
+					"name": "adUnitId",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 94,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 196,
+							"name": "adUnitId",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.adUnitId"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.adUnitId"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.adUnitId"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.adUnitId"
+					}
+				},
+				{
+					"id": 197,
+					"name": "loaded",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 98,
+							"character": 6
+						}
+					],
+					"getSignature": [
+						{
+							"id": 198,
+							"name": "loaded",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd.loaded"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.loaded"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd.loaded"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.loaded"
+					}
+				},
+				{
+					"id": 178,
+					"name": "_handleAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 61,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 179,
+							"name": "_handleAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 180,
+									"name": "event",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 181,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 182,
+													"name": "body",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "ads/MobileAd.ts",
+															"line": 62,
+															"character": 4
+														}
+													],
+													"type": {
+														"type": "reflection",
+														"declaration": {
+															"id": 183,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {},
+															"children": [
+																{
+																	"id": 189,
+																	"name": "data",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 65,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"name": "RewardedAdReward"
+																	}
+																},
+																{
+																	"id": 185,
+																	"name": "error",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 64,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "reflection",
+																		"declaration": {
+																			"id": 186,
+																			"name": "__type",
+																			"kind": 65536,
+																			"kindString": "Type literal",
+																			"flags": {},
+																			"children": [
+																				{
+																					"id": 187,
+																					"name": "code",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 16
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				},
+																				{
+																					"id": 188,
+																					"name": "message",
+																					"kind": 1024,
+																					"kindString": "Property",
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "ads/MobileAd.ts",
+																							"line": 64,
+																							"character": 30
+																						}
+																					],
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				}
+																			],
+																			"groups": [
+																				{
+																					"title": "Properties",
+																					"kind": 1024,
+																					"children": [
+																						187,
+																						188
+																					]
+																				}
+																			]
+																		}
+																	}
+																},
+																{
+																	"id": 184,
+																	"name": "type",
+																	"kind": 1024,
+																	"kindString": "Property",
+																	"flags": {},
+																	"sources": [
+																		{
+																			"fileName": "ads/MobileAd.ts",
+																			"line": 63,
+																			"character": 6
+																		}
+																	],
+																	"type": {
+																		"type": "union",
+																		"types": [
+																			{
+																				"type": "reference",
+																				"id": 24,
+																				"name": "AdEventType"
+																			},
+																			{
+																				"type": "reference",
+																				"id": 39,
+																				"name": "RewardedAdEventType"
+																			}
+																		]
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Properties",
+																	"kind": 1024,
+																	"children": [
+																		189,
+																		185,
+																		184
+																	]
+																}
+															]
+														}
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"kind": 1024,
+													"children": [
+														182
+													]
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._handleAdEvent"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._handleAdEvent"
+					}
+				},
+				{
+					"id": 190,
+					"name": "_setAdEventHandler",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/MobileAd.ts",
+							"line": 89,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 191,
+							"name": "_setAdEventHandler",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 192,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 193,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 194,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "MobileAd._setAdEventHandler"
+							}
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "MobileAd._setAdEventHandler"
+					}
+				},
+				{
+					"id": 159,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/RewardedAd.ts",
+							"line": 122,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 160,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.load"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.load"
+					}
+				},
+				{
+					"id": 161,
+					"name": "onAdEvent",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/RewardedAd.ts",
+							"line": 136,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 162,
+							"name": "onAdEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 163,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "AdEventListener"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 164,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 165,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "literal",
+												"value": null
+											}
+										}
+									]
+								}
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.onAdEvent"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.onAdEvent"
+					}
+				},
+				{
+					"id": 166,
+					"name": "show",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "ads/RewardedAd.ts",
+							"line": 144,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 167,
+							"name": "show",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 168,
+									"name": "showOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "AdShowOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"qualifiedName": "Promise",
+								"package": "typescript",
+								"name": "Promise"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "MobileAdInterface.show"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "MobileAdInterface.show"
+					}
+				},
+				{
+					"id": 148,
+					"name": "createForAdRequest",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true
+					},
+					"sources": [
+						{
+							"fileName": "ads/RewardedAd.ts",
+							"line": 104,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 149,
+							"name": "createForAdRequest",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Creates a new RewardedAd instance.",
+								"text": "#### Example\n\n```js\nimport { RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';\n\nconst rewardedAd = await RewardedAd.createForAdRequest(TestIds.REWARDED, {\n  requestAgent: 'CoolAds',\n});\n\nrewardedAd.onAdEvent((type, error, data) => {\n  console.log('New event: ', type, error);\n\n  if (type === RewardedAdEventType.LOADED) {\n    rewardedAd.show();\n  }\n});\n\nrewardedAd.load();\n```\n"
+							},
+							"parameters": [
+								{
+									"id": 150,
+									"name": "adUnitId",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "The Ad Unit ID for the Rewarded Ad. You can find this on your Google Mobile Ads dashboard."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 151,
+									"name": "requestOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "Optional RequestOptions used to load the ad.\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 147,
+								"name": "RewardedAd"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						152
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						172,
+						170,
+						175,
+						174,
+						177,
+						176,
+						171,
+						173,
+						169
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						195,
+						197
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						178,
+						190,
+						159,
+						161,
+						166,
+						148
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "ads/RewardedAd.ts",
+					"line": 77,
+					"character": 13
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAd"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "MobileAdInterface"
+				}
+			]
+		},
+		{
+			"id": 42,
+			"name": "AdsConsent",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "AdsConsent.ts",
+					"line": 25,
+					"character": 13
+				}
+			],
+			"type": {
+				"type": "reference",
+				"name": "AdsConsentInterface"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 1,
+			"name": "SDK_VERSION",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 21,
+					"character": 13
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "5.0.1"
+			},
+			"defaultValue": "version"
+		},
+		{
+			"id": 18,
+			"name": "TestIds",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "TestIds.ts",
+					"line": 20,
+					"character": 13
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 19,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 20,
+							"name": "APP_OPEN",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "TestIds.ts",
+									"line": 21,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "''"
+						},
+						{
+							"id": 21,
+							"name": "BANNER",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "TestIds.ts",
+									"line": 22,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "''"
+						},
+						{
+							"id": 22,
+							"name": "INTERSTITIAL",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "TestIds.ts",
+									"line": 23,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "''"
+						},
+						{
+							"id": 23,
+							"name": "REWARDED",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "TestIds.ts",
+									"line": 24,
+									"character": 2
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "''"
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								20,
+								21,
+								22,
+								23
+							]
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 199,
+			"name": "BannerAd",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "ads/BannerAd.tsx",
+					"line": 43,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 200,
+					"name": "BannerAd",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"parameters": [
+						{
+							"id": 201,
+							"name": "__namedParameters",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "BannerAdProps"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"qualifiedName": "global.JSX.Element",
+						"package": "@types/react",
+						"name": "Element"
+					}
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "MobileAds",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "MobileAds.ts",
+					"line": 80,
+					"character": 13
+				}
+			],
+			"signatures": [
+				{
+					"id": 3,
+					"name": "MobileAds",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"name": "MobileAdsModule"
+					}
+				}
+			]
+		},
+		{
+			"id": 202,
+			"name": "useAppOpenAd",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "hooks/useAppOpenAd.ts",
+					"line": 33,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 203,
+					"name": "useAppOpenAd",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "React Hook for App Open Ad."
+					},
+					"parameters": [
+						{
+							"id": 204,
+							"name": "adUnitId",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "The Ad Unit ID for the App Open Ad. You can find this on your Google Mobile Ads dashboard. You can destroy ad instance by setting this value to null."
+							},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 205,
+							"name": "requestOptions",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "Optional RequestOptions used to load the ad.\n"
+							},
+							"type": {
+								"type": "reference",
+								"name": "RequestOptions"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "AdHookReturns"
+							},
+							{
+								"type": "literal",
+								"value": "adReward"
+							}
+						],
+						"qualifiedName": "Omit",
+						"package": "typescript",
+						"name": "Omit"
+					}
+				}
+			]
+		},
+		{
+			"id": 206,
+			"name": "useInterstitialAd",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "hooks/useInterstitialAd.ts",
+					"line": 33,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 207,
+					"name": "useInterstitialAd",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "React Hook for Interstitial Ad."
+					},
+					"parameters": [
+						{
+							"id": 208,
+							"name": "adUnitId",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "The Ad Unit ID for the Interstitial Ad. You can find this on your Google Mobile Ads dashboard. You can destroy ad instance by setting this value to null."
+							},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 209,
+							"name": "requestOptions",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "Optional RequestOptions used to load the ad.\n"
+							},
+							"type": {
+								"type": "reference",
+								"name": "RequestOptions"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "AdHookReturns"
+							},
+							{
+								"type": "literal",
+								"value": "adReward"
+							}
+						],
+						"qualifiedName": "Omit",
+						"package": "typescript",
+						"name": "Omit"
+					}
+				}
+			]
+		},
+		{
+			"id": 210,
+			"name": "useRewardedAd",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "hooks/useRewardedAd.ts",
+					"line": 33,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 211,
+					"name": "useRewardedAd",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "React Hook for Rewarded Ad."
+					},
+					"parameters": [
+						{
+							"id": 212,
+							"name": "adUnitId",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "The Ad Unit ID for the Rewarded Ad. You can find this on your Google Mobile Ads dashboard. You can destroy ad instance by setting this value to null."
+							},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 213,
+							"name": "requestOptions",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "Optional RequestOptions used to load the ad.\n"
+							},
+							"type": {
+								"type": "reference",
+								"name": "RequestOptions"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "AdHookReturns"
+							},
+							{
+								"type": "literal",
+								"value": "adReward"
+							}
+						],
+						"qualifiedName": "Omit",
+						"package": "typescript",
+						"name": "Omit"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "References",
+			"kind": 16777216,
+			"children": [
+				214
+			]
+		},
+		{
+			"title": "Enumerations",
+			"kind": 8,
+			"children": [
+				24,
+				4,
+				8,
+				30,
+				13,
+				39
+			]
+		},
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				43,
+				95,
+				147
+			]
+		},
+		{
+			"title": "Variables",
+			"kind": 32,
+			"children": [
+				42,
+				1,
+				18
+			]
+		},
+		{
+			"title": "Functions",
+			"kind": 64,
+			"children": [
+				199,
+				2,
+				202,
+				206,
+				210
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 18,
+			"character": 0
+		}
+	]
+}
